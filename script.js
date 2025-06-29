@@ -285,8 +285,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         localStorage.setItem("theme", theme);
     };
-    const savedTheme = localStorage.getItem("theme") || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
-    applyTheme(savedTheme);
+    let savedTheme = localStorage.getItem("theme");
+if (!savedTheme) {
+    savedTheme = "dark"; // Default to dark if no preference set
+}
+applyTheme(savedTheme);
     document.getElementById("theme-toggle").addEventListener("click", () => {
         const currentTheme = localStorage.getItem("theme");
         if (currentTheme === "dark") {
