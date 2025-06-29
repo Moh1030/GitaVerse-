@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitaVerse</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Devanagari&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="min-h-screen font-sans">
+    <header class="text-white shadow-lg py-6">
+        <div class="header-bg-text">
+            <p class="bg-line-primary">॥ अंतः अस्ति प्रारंभः ॥</p>
+            <p class="bg-line-secondary">अंत से ही एक नई शुरुआत होती है ।</p>
+        </div>
+        <div class="container">
+            <div class="flex">
+                <div class="flex-items-center">
+                    <img src="img/om.jpg" alt="Om symbol placeholder" class="om-image om-pulse" />
+                    <h1 class="header-title">GitaVerse</h1>
+                </div>
+                <button id="theme-toggle" class="theme-toggle-button" title="Toggle theme">
+                    <svg id="sun-icon" class="toggle-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.325 3.325l-.707.707M6.364 6.364l-.707-.707m12.728 0l-.707-.707M6.364 17.636l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z">
+                        </path>
+                    </svg>
+                    <svg id="moon-icon" class="toggle-icon hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z">
+                        </path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        </div>
+    </header>
+    <main class="container">
+        <div id="loader" class="loader-center hidden">
+            <div class="loader-spinner"></div>
+            <p class="loader-text">🔱 श्री भगवद् गीता लोड हो रही है...</p>
+        </div>
+        <div id="chapter-detail-screen" class="hidden">
+            <div class="chapter-detail-header">
+                <h3 id="detail-chapter-title" class="chapter-detail-title"></h3>
+            </div>
+            <div class="chapter-detail-summary-card">
+                <h4 class="chapter-detail-summary-title">About this Chapter:</h4>
+                <p id="detail-chapter-summary" class="chapter-detail-summary-text"></p>
+                <p class="chapter-detail-verse-count">
+                    Total Verses: <span id="detail-total-verses"></span>
+                </p>
+            </div>
+            <h4 class="verses-heading">Verses</h4>
+            <div id="verses-list" class="verses-grid"></div>
+            <button id="back-to-chapters-btn" class="fixed-button back-to-chapters-button hidden"
+                title="Back to Chapters">
+                <svg class="icon-small" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+                </svg>
+            </button>
+            <button id="go-to-top-btn" class="fixed-button go-to-top-button hidden" title="Go to Top">
+                <svg class="icon-small" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div id="welcome-screen" class="welcome-hero">
+            <img src="img/mahabharat.webp" alt="Mahabharat Krishna Arjuna" class="welcome-background-image" />
+            <div class="glass-overlay">
+                <h2>Welcome to <span class="highlight">GitaVerse</span></h2>
+                <p class="welcome-text">
+                    Immerse Yourself in the Timeless Wisdom of the Bhagavad Gita.<br />
+                    Experience every sacred verse in <strong>Sanskrit</strong>, <strong>Hindi</strong>, and
+                    <strong>English</strong> — all in one divine journey.
+                </p>
+                <div class="sanskrit-verse-animation">
+                    <p>कर्मण्येवाधिकारस्ते मा फलेषु कदाचन।</p>
+                    <p>मा कर्मफलहेतुर्भूर्मा ते सङ्गोऽस्त्वकर्मणि॥</p>
+                </div>
+            </div>
+        </div>
+        <div id="about-gita-section" class="about-gita-card">
+            <h3 class="about-gita-title">About the Bhagavad Gita</h3>
+            <p class="about-gita-paragraph">
+                Bhagavad Gita, also known as the Gita - "The Song of The Lord" is a practical guide to one's life that
+                guides one to re-organise their life, achieve inner peace and approach the Supreme Lord (the Ultimate
+                Reality). It is a 700-verse text in Sanskrit which comprises chapters 23 through 40 in the Bhishma-Parva
+                section of the Mahabharata.
+                The Bhagavad Gita is a dialogue between Arjuna, a supernaturally gifted warrior and his guide and
+                charioteer Lord Krishna on the battlefield of Kurukshetra. As both armies stand ready for the battle,
+                the mighty warrior Arjuna, on observing the warriors on both sides becomes overwhelmed with grief and
+                compassion due to the fear of losing his relatives and friends and the consequent sins attributed to
+                killing his own relatives. So, he surrenders to Lord Krishna, seeking a solution. Thus, follows the
+                wisdom of the Bhagavad Gita. Over 18 chapters, Gita packs an intense analysis of life, emotions and
+                ambitions, discussion of various types of yoga, including Jnana, Bhakti, Karma and Raja, the difference
+                between Self and the material body as well as the revelation of the Ultimate Purpose of Life.
+            </p>
+            <p class="about-gita-paragraph">
+                The Bhagavad Gita presents a synthesis of Hindu ideas about dharma,
+                theistic devotion, and the yogic ideals of moksha. It covers various
+                topics including the nature of reality, the concept of duty, the paths
+                to spiritual liberation, and the Supreme Being.
+            </p>
+        </div>
+        <div id="verse-of-day-section" class="verse-of-day-card">
+            <h3 class="verse-of-day-title">Verse of the Day</h3>
+            <div id="daily-verse-content">
+                <p class="daily-sanskrit-verse" id="daily-sanskrit-verse">Loading...</p>
+                <p class="daily-english-meaning" id="daily-english-meaning"></p>
+                <p class="daily-verse-reference" id="daily-verse-reference"></p>
+            </div>
+            <button id="see-more-verse" class="see-more-button">See More</button>
+        </div>
+        <div id="chapters-grid-section" class="chapters-grid-section-styles">
+            <h3 class="chapters-grid-title">Explore Chapters</h3>
+            <div id="chapters-list" class="chapters-list-grid"></div>
+        </div>
+    </main>
+    <footer class="footer-styles">
+        <div class="container footer-content">
+            <p>© 2025 GitaVerse | Powered by Vedic Scriptures API | Developed by Mohit Kumar Agarwal</p>
+            <p class="footer-small-text">Data provided for spiritual and educational purposes</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
